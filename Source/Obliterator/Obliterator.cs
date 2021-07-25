@@ -9,7 +9,6 @@ namespace VVO_Obliterator
 {
     public class ModExtension_ObliteratorBullet : DefModExtension
     {
-        public float addHediffChance = 0.05f;
-        public HediffDef hediffToAdd;
+        public float destroyBodyPartChance = 0.5f;
     }
 }

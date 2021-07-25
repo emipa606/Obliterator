@@ -18,34 +18,27 @@ namespace VVO_Obliterator
             {
                 float rand = Rand.Value;
                 // See if we apply the hediff 
-                if (rand <= Props.addHediffChance)
+                if (rand <= Props.destroyBodyPartChance)
                 {
+                    // Get list of available body parts
+                    IEnumerable<BodyPartRecord> parts = hitPawn.health?.hediffSet?.GetNotMissingParts();
+                    List<BodyPartRecord> partsList = parts.ToList();
+
+                    // Get a random index
+                    Random rnd = new Random();
+                    int randomNumber = rnd.Next(0, parts.Count());   
+
+                    // Destroy a body part of a given pawn
+                    DestroyPart(hitPawn, partsList[randomNumber]);
                     Messages.Message("VVO_Obliterator_SuccessMessage".Translate(
-                        this.launcher.Label, hitPawn.Label), MessageTypeDefOf.NeutralEvent);
-
-                    // Verify if the target already has the hediff
-                    Hediff plagueOnPawn = hitPawn.health?.hediffSet?.GetFirstHediffOfDef(Props.hediffToAdd);
-                    float randomSeverity = Rand.Range(0.15f, 0.30f);
-
-                    if (plagueOnPawn != null)
-                    {
-                        // Target already has plague, add the severity
-                        plagueOnPawn.Severity += randomSeverity;
-                    } else
-                    {
-                        // Target has no plague
-                        Hediff hediff = HediffMaker.MakeHediff(Props.hediffToAdd, hitPawn);
-                        hediff.Severity = randomSeverity;
-                        hitPawn.health.AddHediff(hediff);
-                    }
-
-
-                }
-                else
-                {
-                    MoteMaker.ThrowText(hitThing.PositionHeld.ToVector3(), hitThing.MapHeld, "VVO_Obliterator_FailureMote".Translate(Props.addHediffChance), 12f);
+                        this.launcher.Label, partsList[randomNumber].Label, hitPawn.Label), MessageTypeDefOf.NeutralEvent);
                 }
             }
+        }
+
+        public virtual void DestroyPart(Pawn pawn, BodyPartRecord part)
+        {
+            pawn.TakeDamage(new DamageInfo(DamageDefOf.Bullet, 99999f, 999f, -1f, null, part, null, DamageInfo.SourceCategory.ThingOrUnknown, null, true, true));
         }
     }
 }
