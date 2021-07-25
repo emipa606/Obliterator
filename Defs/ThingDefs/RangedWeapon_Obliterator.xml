@@ -43,8 +43,7 @@
       <RangedWeapon_Cooldown>1.6</RangedWeapon_Cooldown>
     </statBases>
     <weaponTags>
-      <li>SimpleGun</li>
-      <li>Rifle</li>
+      <li>GunHeavy</li>
     </weaponTags>
     <weaponClasses>
       <li>RangedHeavy</li>
