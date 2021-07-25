@@ -17,8 +17,10 @@ namespace VVO_Obliterator
             if (Props != null && hitThing != null && hitThing is Pawn hitPawn) 
             {
                 float rand = Rand.Value;
+                float destroyBodyPartChance = LoadedModManager.GetMod<ObliteratorMod>().GetSettings<ObliteratorSettings>().destroyBodyPartChance;
+
                 // See if we apply the hediff 
-                if (rand <= Props.destroyBodyPartChance)
+                if (rand <= destroyBodyPartChance)
                 {
                     // Get list of available body parts
                     IEnumerable<BodyPartRecord> parts = hitPawn.health?.hediffSet?.GetNotMissingParts();

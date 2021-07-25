@@ -15,7 +15,7 @@
     </projectile>
     <modExtensions>
       <li Class="VVO_Obliterator.ModExtension_ObliteratorBullet">
-          <destroyBodyPartChance>1</destroyBodyPartChance>
+          <destroyBodyPartChance>0.5</destroyBodyPartChance>
       </li>
   </modExtensions>
   <thingClass>VVO_Obliterator.Projectile_ObliteratorBullet</thingClass>
