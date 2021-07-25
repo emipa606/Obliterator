@@ -15,8 +15,7 @@
     </projectile>
     <modExtensions>
       <li Class="VVO_Obliterator.ModExtension_ObliteratorBullet">
-          <addHediffChance>1</addHediffChance>
-          <hediffToAdd>Plague</hediffToAdd>
+          <destroyBodyPartChance>1</destroyBodyPartChance>
       </li>
   </modExtensions>
   <thingClass>VVO_Obliterator.Projectile_ObliteratorBullet</thingClass>
