@@ -31,7 +31,7 @@
     </graphicData>
     <equippedAngleOffset>45</equippedAngleOffset>
     <uiIconScale>1.1</uiIconScale>
-    <soundInteract>Interact_Rifle</soundInteract>
+    <soundInteract>VVO_Equip_Obliterator</soundInteract>
     <thingSetMakerTags><li>RewardStandardQualitySuper</li></thingSetMakerTags>
     <statBases>
       <WorkToMake>4000</WorkToMake>
@@ -64,7 +64,7 @@
         <defaultProjectile>VVO_Bullet_Obliterator</defaultProjectile>
         <warmupTime>3</warmupTime>
         <range>25.9</range>
-        <soundCast>Shot_ChargeBlaster</soundCast>
+        <soundCast>VVO_Shot_Obliterator</soundCast>
         <soundCastTail>GunTail_Heavy</soundCastTail>
         <muzzleFlashScale>18</muzzleFlashScale>
       </li>
