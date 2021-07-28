@@ -16,11 +16,12 @@ namespace VVO_Obliterator
             base.Impact(hitThing);
             if (Props != null && hitThing != null && hitThing is Pawn hitPawn) 
             {
-                float rand = Rand.Value;
+                float randomPercent = Rand.Value * 100;
+                bool enableAlert = LoadedModManager.GetMod<ObliteratorMod>().GetSettings<ObliteratorSettings>().enableAlert;
                 float destroyBodyPartChance = LoadedModManager.GetMod<ObliteratorMod>().GetSettings<ObliteratorSettings>().destroyBodyPartChance;
 
                 // See if we apply the hediff 
-                if (rand <= destroyBodyPartChance)
+                if (randomPercent <= destroyBodyPartChance)
                 {
                     // Get list of available body parts
                     IEnumerable<BodyPartRecord> parts = hitPawn.health?.hediffSet?.GetNotMissingParts();
@@ -32,8 +33,11 @@ namespace VVO_Obliterator
 
                     // Destroy a body part of a given pawn
                     DestroyPart(hitPawn, partsList[randomNumber]);
-                    Messages.Message("VVO_Obliterator_SuccessMessage".Translate(
-                        this.launcher.Label, partsList[randomNumber].Label, hitPawn.Label), MessageTypeDefOf.NeutralEvent);
+                    if (enableAlert)
+                    {
+                        Messages.Message("VVO_Obliterator_SuccessMessage".Translate(
+                            this.launcher.Label, partsList[randomNumber].Label, hitPawn.Label), MessageTypeDefOf.NeutralEvent);
+                    }
                 }
             }
         }

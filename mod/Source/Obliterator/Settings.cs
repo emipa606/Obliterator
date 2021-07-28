@@ -11,6 +11,7 @@ namespace VVO_Obliterator
         /// The three settings our mod has.
         /// </summary>
         public float destroyBodyPartChance;
+        public bool enableAlert;
 
         /// <summary>
         /// The part that writes our settings to file. Note that saving is by ref.
@@ -18,6 +19,7 @@ namespace VVO_Obliterator
         public override void ExposeData()
         {
             Scribe_Values.Look(ref destroyBodyPartChance, "destroyBodyPartChance");
+            Scribe_Values.Look(ref enableAlert, "enableAlert");
             base.ExposeData();
         }
     }
@@ -46,6 +48,7 @@ namespace VVO_Obliterator
         {
             Listing_Standard listingStandard = new Listing_Standard();
             listingStandard.Begin(inRect);
+            listingStandard.CheckboxLabeled("Show alert message", ref settings.enableAlert, "Show an alert message indicating which body port was obliterated.");
             listingStandard.Label("The chance of destroying a body part on hit: " + Math.Round(settings.destroyBodyPartChance, 0) + "%");
             settings.destroyBodyPartChance = listingStandard.Slider(settings.destroyBodyPartChance, 0f, 100f);
             listingStandard.End();

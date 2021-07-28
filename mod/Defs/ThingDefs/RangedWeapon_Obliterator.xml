@@ -15,7 +15,7 @@
     </projectile>
     <modExtensions>
       <li Class="VVO_Obliterator.ModExtension_ObliteratorBullet">
-          <destroyBodyPartChance>0.5</destroyBodyPartChance>
+          <destroyBodyPartChance>1</destroyBodyPartChance>
       </li>
   </modExtensions>
   <thingClass>VVO_Obliterator.Projectile_ObliteratorBullet</thingClass>
@@ -24,7 +24,7 @@
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>VVO_Gun_Obliterator</defName>
     <label>obliterator</label>
-    <description>A massive gun with the possibility to obliterate your enemies. Extremely powerful but not reliable.</description>
+    <description>A massive gun that obliterates the body parts of your enemies. The question is which body part...</description>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/Obliterator</texPath>
       <graphicClass>Graphic_Single</graphicClass>
