@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <SoundDef>
+    <defName>VVO_Shot_Obliterator</defName>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>ShotObliterator</clipPath>
+          </li>
+        </grains>
+        <volumeRange>10</volumeRange>
+        <distRange>15~30</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+  <SoundDef>
+    <defName>VVO_Equip_Obliterator</defName>
+    <maxSimultaneous>1</maxSimultaneous>
+    <subSounds>
+      <li>
+        <onCamera>True</onCamera>
+        <grains>
+          <li Class="AudioGrain_Clip">
+            <clipPath>EquipObliterator</clipPath>
+          </li>
+        </grains>
+        <volumeRange>10</volumeRange>
+        <distRange>15~30</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+</Defs>
