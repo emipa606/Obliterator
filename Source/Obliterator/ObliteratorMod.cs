@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Mlie;
+using UnityEngine;
 using Verse;
 
 namespace VVO_Obliterator;
@@ -6,6 +7,7 @@ namespace VVO_Obliterator;
 public class ObliteratorMod : Mod
 {
     public static ObliteratorMod instance;
+    private static string currentVersion;
 
     /// <summary>
     ///     A reference to our settings.
@@ -20,6 +22,7 @@ public class ObliteratorMod : Mod
     {
         instance = this;
         settings = GetSettings<ObliteratorSettings>();
+        currentVersion = VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
     }
 
     /// <summary>
@@ -34,6 +37,14 @@ public class ObliteratorMod : Mod
             "VVO_Obliterator_ShowAlertTT".Translate());
         listingStandard.Label("VVO_Obliterator_Chance".Translate(settings.destroyBodyPartChance.ToStringPercent()));
         settings.destroyBodyPartChance = listingStandard.Slider(settings.destroyBodyPartChance, 0f, 1f);
+        if (currentVersion != null)
+        {
+            listingStandard.Gap();
+            GUI.contentColor = Color.gray;
+            listingStandard.Label("VVO_Obliterator_CurrentModVersion".Translate(currentVersion));
+            GUI.contentColor = Color.white;
+        }
+
         listingStandard.End();
         base.DoSettingsWindowContents(inRect);
     }

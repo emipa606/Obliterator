@@ -5,4 +5,5 @@
   <VVO_Obliterator_Chance>La probabilité de détruire une partie du corps lors d'un coup : {0}</VVO_Obliterator_Chance>
   <VVO_Obliterator_ShowAlert>Afficher le message d'alerte</VVO_Obliterator_ShowAlert>
   <VVO_Obliterator_ShowAlertTT>Afficher un message d'alerte indiquant le port du corps qui a été oblitéré.</VVO_Obliterator_ShowAlertTT>
+  <VVO_Obliterator_CurrentModVersion>Version installée du mod : {0}</VVO_Obliterator_CurrentModVersion>
 </LanguageData>

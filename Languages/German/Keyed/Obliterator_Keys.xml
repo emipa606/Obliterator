@@ -5,4 +5,5 @@
   <VVO_Obliterator_Chance>Die Chance, einen Körperteil bei einem Treffer zu zerstören: {0}</VVO_Obliterator_Chance>
   <VVO_Obliterator_ShowAlert>Warnmeldung anzeigen</VVO_Obliterator_ShowAlert>
   <VVO_Obliterator_ShowAlertTT>Zeigt eine Warnmeldung an, die angibt, welcher Bodyport ausgelöscht wurde.</VVO_Obliterator_ShowAlertTT>
+  <VVO_Obliterator_CurrentModVersion>Installierte Mod-Version: {0}</VVO_Obliterator_CurrentModVersion>
 </LanguageData>

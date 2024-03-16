@@ -5,4 +5,5 @@
   <VVO_Obliterator_Chance>击中时破坏身体部位的机会：{0}</VVO_Obliterator_Chance>
   <VVO_Obliterator_ShowAlert>显示警报信息</VVO_Obliterator_ShowAlert>
   <VVO_Obliterator_ShowAlertTT>显示一个警告信息，说明哪个机体端口被抹去了。</VVO_Obliterator_ShowAlertTT>
+  <VVO_Obliterator_CurrentModVersion>已安装模块版本：{0}</VVO_Obliterator_CurrentModVersion>
 </LanguageData>

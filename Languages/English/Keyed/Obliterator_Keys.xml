@@ -4,4 +4,5 @@
   <VVO_Obliterator_Chance>The chance of destroying a body part on hit: {0}</VVO_Obliterator_Chance>
   <VVO_Obliterator_ShowAlert>Show alert message</VVO_Obliterator_ShowAlert>
   <VVO_Obliterator_ShowAlertTT>Show an alert message indicating which body port was obliterated.</VVO_Obliterator_ShowAlertTT>
+  <VVO_Obliterator_CurrentModVersion>Installed mod-version: {0}</VVO_Obliterator_CurrentModVersion>
 </LanguageData>
