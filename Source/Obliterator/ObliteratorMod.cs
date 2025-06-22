@@ -6,13 +6,13 @@ namespace VVO_Obliterator;
 
 public class ObliteratorMod : Mod
 {
-    public static ObliteratorMod instance;
+    public static ObliteratorMod Instance;
     private static string currentVersion;
 
     /// <summary>
     ///     A reference to our settings.
     /// </summary>
-    public readonly ObliteratorSettings settings;
+    public readonly ObliteratorSettings Settings;
 
     /// <summary>
     ///     A mandatory constructor which resolves the reference to our settings.
@@ -20,8 +20,8 @@ public class ObliteratorMod : Mod
     /// <param name="content"></param>
     public ObliteratorMod(ModContentPack content) : base(content)
     {
-        instance = this;
-        settings = GetSettings<ObliteratorSettings>();
+        Instance = this;
+        Settings = GetSettings<ObliteratorSettings>();
         currentVersion = VersionFromManifest.GetVersionFromModMetaData(content.ModMetaData);
     }
 
@@ -33,10 +33,10 @@ public class ObliteratorMod : Mod
     {
         var listingStandard = new Listing_Standard();
         listingStandard.Begin(inRect);
-        listingStandard.CheckboxLabeled("VVO_Obliterator_ShowAlert".Translate(), ref settings.enableAlert,
+        listingStandard.CheckboxLabeled("VVO_Obliterator_ShowAlert".Translate(), ref Settings.EnableAlert,
             "VVO_Obliterator_ShowAlertTT".Translate());
-        listingStandard.Label("VVO_Obliterator_Chance".Translate(settings.destroyBodyPartChance.ToStringPercent()));
-        settings.destroyBodyPartChance = listingStandard.Slider(settings.destroyBodyPartChance, 0f, 1f);
+        listingStandard.Label("VVO_Obliterator_Chance".Translate(Settings.DestroyBodyPartChance.ToStringPercent()));
+        Settings.DestroyBodyPartChance = listingStandard.Slider(Settings.DestroyBodyPartChance, 0f, 1f);
         if (currentVersion != null)
         {
             listingStandard.Gap();

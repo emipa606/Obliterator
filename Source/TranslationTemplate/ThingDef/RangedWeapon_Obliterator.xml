@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LanguageData>
+  <!-- EN: obliterator bullet -->
+  <VVO_Bullet_Obliterator.label>obliterator bullet</VVO_Bullet_Obliterator.label>
+  <!-- EN: obliterator -->
+  <VVO_Gun_Obliterator.label>obliterator</VVO_Gun_Obliterator.label>
+  <!-- EN: A massive gun that obliterates the body parts of your enemies. The question is which body part... -->
+  <VVO_Gun_Obliterator.description>A massive gun that obliterates the body parts of your enemies. The question is which body part...</VVO_Gun_Obliterator.description>
+  <!-- EN: grip -->
+  <VVO_Gun_Obliterator.tools.grip.label>grip</VVO_Gun_Obliterator.tools.grip.label>
+  <!-- EN: barrel -->
+  <VVO_Gun_Obliterator.tools.barrel.label>barrel</VVO_Gun_Obliterator.tools.barrel.label>
+  <!-- EN: obliterator -->
+  <VVO_Gun_Obliterator.verbs.Verb_Shoot.label>obliterator</VVO_Gun_Obliterator.verbs.Verb_Shoot.label>
+</LanguageData>

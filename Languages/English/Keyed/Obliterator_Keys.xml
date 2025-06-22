@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <VVO_Obliterator_SuccessMessage>{0} obliterated {1} of {2}!</VVO_Obliterator_SuccessMessage>
   <VVO_Obliterator_Chance>The chance of destroying a body part on hit: {0}</VVO_Obliterator_Chance>

@@ -6,7 +6,7 @@ namespace VVO_Obliterator;
 
 public class Projectile_ObliteratorBullet : Bullet
 {
-    public ModExtension_ObliteratorBullet Props => def.GetModExtension<ModExtension_ObliteratorBullet>();
+    private ModExtension_ObliteratorBullet Props => def.GetModExtension<ModExtension_ObliteratorBullet>();
 
     protected override void Impact(Thing hitThing, bool blockedByShield = false)
     {
@@ -16,8 +16,8 @@ public class Projectile_ObliteratorBullet : Bullet
             return;
         }
 
-        var enableAlert = ObliteratorMod.instance.settings.enableAlert;
-        var destroyBodyPartChance = ObliteratorMod.instance.settings.destroyBodyPartChance;
+        var enableAlert = ObliteratorMod.Instance.Settings.EnableAlert;
+        var destroyBodyPartChance = ObliteratorMod.Instance.Settings.DestroyBodyPartChance;
 
         // See if we apply the hediff 
         if (Rand.Value > destroyBodyPartChance)
